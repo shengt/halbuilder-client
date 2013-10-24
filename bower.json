@@ -8,7 +8,8 @@
     "jquery": "~1.10.2",
     "text": "~2.0.10",
     "backbone-amd": "~1.1.0",
-    "underscore-amd": "~1.5.2"
+    "underscore-amd": "~1.5.2",
+    "require-cs": "~0.4.4"
   },
   "devDependencies": {}
 }
