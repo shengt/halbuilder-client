@@ -2,7 +2,20 @@
 define [
 	'jquery'
 	'cs!views/orderView'
-], ($, OrderView) ->
-	app = new OrderView
-		el: $ '#order-list'
-		apiUrl: '/api'
+	'cs!utils'
+], ($, OrderView, utils) ->
+	apiUrl = '/api'
+	apiOrderUrl = ''
+
+	$.get(apiUrl).done((resp) =>
+		apiOrderUrl = utils.getLinkHref resp, 'orders'
+
+		console.log 'api orders url:', apiOrderUrl
+
+		app = new OrderView
+			el: $ '#order-list'
+			apiUrl: apiOrderUrl
+
+	).fail((err) =>
+		alert 'api is not available.'
+	)
