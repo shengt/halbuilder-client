@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>halbuilder front end</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
@@ -25,14 +25,24 @@
 
         <div class="container">
             <div class="header">
-                <h3 class="text-muted">Halbuilder!</h3>
-                <p>A Hypertext Application Language MediaType library for the JVM.</p>
+                <h3 class="text-muted">Welcome to RESTBucks (Backbone version)</h3>
             </div>
 
-            <div class="jumbotron">
-                <h1>'Allo, 'Allo!</h1>
-                <p class="lead">Always a pleasure scaffolding your apps.</p>
-                <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
+            <div id="order-list" class="row">
+            </div>
+
+            <div id="order-form" class="row">
+                <form role="form" class="form-inline" onsubmit="return false">
+                    <div class="form-group">
+                        <label class="sr-only" for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name" required disabled>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="drink">Drink:</label>
+                        <input type="text" class="form-control" id="drink" placeholder="Drink" required disabled>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Submit" disabled>
+                </form>
             </div>
 
             <div class="footer">

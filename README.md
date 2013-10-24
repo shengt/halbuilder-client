@@ -1,9 +1,19 @@
 halbuilder-client
 =================
 
-HAL Builder Frontend
-
-### Run App
-```bash
+### Runtime env setup
+1. Checkout source code
+```shell
+mkdir hal-example
+cd hal-example
+git clone https://github.com/shengt/halbuilder-client.git
+```
+2. Download dependencies
+```shell
+npm install
+bower install
+```shell
+3. Run the App
+```
 grunt server
 ```

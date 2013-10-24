@@ -17,7 +17,8 @@ require.config({
         cs: '../bower_components/require-cs/cs',
         'coffee-script': '../bower_components/require-cs/coffee-script',
         'underscore': '../bower_components/underscore-amd/underscore',
-        'backbone': '../bower_components/backbone-amd/backbone'
+        'backbone': '../bower_components/backbone-amd/backbone',
+        'jquery.validate': '../bower_components/jquery.validation/jquery.validate'
     },
     shim: {
         bootstrapAffix: {
@@ -56,15 +57,12 @@ require.config({
         bootstrapTransition: {
             deps: ['jquery']
         },
-        backbone: {
-            deps: ['underscore']
-        }
+        'jquery.validate': ['jquery']
     }
 });
 
-require(['app', 'jquery'], function (app, $) {
+require(['cs!app', 'jquery'], function (app, $) {
     'use strict';
     // use app here
-    console.log(app);
     console.log('Running jQuery %s', $().jquery);
 });
