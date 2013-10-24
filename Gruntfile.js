@@ -38,6 +38,22 @@ module.exports = function (grunt) {
                     '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
+            },
+            express: {
+                files: [
+                    'express/{,*/}*.js'
+                ],
+                tasks: ['express:dev'],
+                options: {
+                    nospawn: true
+                }
+            }
+        },
+        express: {
+            dev: {
+                options: {
+                    script: 'express/dev.js'
+                }
             }
         },
         connect: {
@@ -319,7 +335,7 @@ module.exports = function (grunt) {
             'clean:server',
             'concurrent:server',
             'autoprefixer',
-            'connect:livereload',
+            'express:dev',
             'watch'
         ]);
     });

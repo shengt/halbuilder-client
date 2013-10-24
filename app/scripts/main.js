@@ -55,14 +55,11 @@ require.config({
         },
         bootstrapTransition: {
             deps: ['jquery']
-        },
-        backbone: {
-            deps: ['underscore']
         }
     }
 });
 
-require(['app', 'jquery'], function (app, $) {
+require(['cs!app', 'jquery'], function (app, $) {
     'use strict';
     // use app here
     console.log(app);
