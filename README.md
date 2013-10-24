@@ -17,3 +17,5 @@ bower install
 ```
 grunt server
 ```
+4. Launch browser
+localhost:3000
