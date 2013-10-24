@@ -25,10 +25,24 @@
 
         <div class="container">
             <div class="header">
-                <h3 class="text-muted">Welcome to RESTBucks</h3>
+                <h3 class="text-muted">Welcome to RESTBucks (Backbone version)</h3>
             </div>
 
             <div id="order-list" class="row">
+            </div>
+
+            <div id="order-form" class="row">
+                <form role="form" class="form-inline" onsubmit="return false">
+                    <div class="form-group">
+                        <label class="sr-only" for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name" required disabled>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="drink">Drink:</label>
+                        <input type="text" class="form-control" id="drink" placeholder="Drink" required disabled>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Submit" disabled>
+                </form>
             </div>
 
             <div class="footer">

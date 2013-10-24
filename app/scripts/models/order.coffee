@@ -1,9 +1,8 @@
 # Order model
 # - Name
 # - Drink
-
 define ['backbone'], (Backbone) ->
-	Backbone.extend
+	Backbone.Model.extend
 		defaults: 
 			name: ''
 			drink: ''

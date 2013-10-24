@@ -1,0 +1,17 @@
+<div class="alert"></div>
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Drink</th>
+		</tr>
+	</thead>
+	<tbody id="orders">
+		<% _.each(orders, function(order) { %>
+		<tr>
+			<td><%= order.name %></td>
+			<td><%= order.drink %></td>
+		</tr>
+		<% }); %>
+	</tbody>
+</table>

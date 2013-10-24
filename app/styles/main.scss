@@ -40,7 +40,6 @@ body {
 .footer {
     padding-top: 19px;
     color: #777;
-    border-top: 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {
@@ -50,7 +49,6 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
     text-align: center;
-    border-bottom: 1px solid #e5e5e5;
 }
 
 .jumbotron .btn {
@@ -65,6 +63,10 @@ body {
 
 .marketing p + h4 {
     margin-top: 28px;
+}
+
+.alert {
+    display: none;
 }
 
 /* Responsive: Portrait tablets and up */
